@@ -2,9 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!-- CAMBIO 1: Línea fundamental para que el navegador del celular entienda la escala -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>SLOANE | Cosmética Contemporánea</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
     
@@ -14,391 +12,217 @@
             --azul-oscuro: #2f4f4f;
             --azul-fondo: #f4f7f9;
             --blanco: #ffffff;
-            --rojo-eliminar: #c0392b; /* Nuevo color para el botón eliminar */
+            --rojo-eliminar: #c0392b;
+            --whatsapp-color: #25d366;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--blanco); color: var(--azul-oscuro); scroll-behavior: smooth; }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--blanco);
-            color: var(--azul-oscuro);
-            scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%; /* Evita cambios de tamaño de texto raros en iOS */
-        }
+        /* Navegación */
+        header { border-bottom: 1px solid #eee; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: white; z-index: 1000; }
+        .logo-container { display: flex; align-items: center; text-decoration: none; color: var(--azul-oscuro); }
+        .logo-img { height: 40px; margin-right: 10px; }
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; letter-spacing: 3px; }
+        
+        nav ul { display: flex; list-style: none; align-items: center; }
+        nav ul li { margin: 0 10px; }
+        nav ul li a { text-decoration: none; color: var(--azul-oscuro); font-size: 11px; font-weight: 600; text-transform: uppercase; }
 
-        /* Navegación Base */
-        header {
-            border-bottom: 1px solid #eee;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            background: white;
-            z-index: 1000;
-        }
+        /* Botón Idioma */
+        .lang-btn { background: var(--azul-oscuro); color: white; border: none; padding: 5px 10px; cursor: pointer; font-size: 10px; border-radius: 3px; }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--azul-oscuro);
-        }
+        /* WhatsApp Flotante */
+        .btn-whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: var(--whatsapp-color); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 3000; }
 
-        .logo-img {
-            height: 40px;
-            margin-right: 10px;
-        }
+        /* Secciones */
+        section { padding: 60px 10%; }
+        .hero { background: var(--azul-fondo); text-align: center; padding: 80px 10%; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 40px; }
 
-        .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: 3px;
-        }
+        /* Tienda */
+        .shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .product-card { border: 1px solid #f0f0f0; padding: 15px; text-align: center; background: #fff; }
+        .product-card img { width: 100%; height: 200px; object-fit: contain; }
+        .btn-add { background: var(--azul-oscuro); color: white; padding: 10px; border: none; cursor: pointer; width: 100%; font-weight: bold; }
 
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin: 0 15px; }
-        nav ul li a { 
-            text-decoration: none; 
-            color: var(--azul-oscuro); 
-            font-size: 12px; 
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        /* Secciones Base */
-        section { padding: 80px 10%; }
-        .hero { background: var(--azul-fondo); text-align: center; padding: 100px 10%; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 45px; margin-bottom: 15px; }
-
-        /* Historia Base */
-        .historia-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-        .historia-box h2 { font-family: 'Playfair Display', serif; margin-bottom: 15px; color: var(--azul-marca); }
-
-        /* Tienda Base */
-        .shop-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 30px; 
-        }
-
-        .product-card {
-            border: 1px solid #f0f0f0;
-            padding: 20px;
-            text-align: center;
-            transition: 0.3s;
-            background: #fff;
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-
-        .product-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin: 10px 0; }
-        .price { font-weight: bold; color: var(--azul-marca); font-size: 1.3rem; margin-bottom: 15px; }
-
-        .btn-add {
-            background: var(--azul-oscuro);
-            color: white;
-            padding: 12px;
-            border: none;
-            cursor: pointer;
-            font-size: 11px;
-            font-weight: 700;
-            width: 100%;
-        }
-
-        /* Modal / Calculadora Base */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4);
-            z-index: 2000;
-            justify-content: center; align-items: center;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 40px;
-            width: 90%; /* Ajuste responsivo base */
-            max-width: 450px;
-            border: 1px solid var(--azul-oscuro);
-            position: relative;
-        }
-
-        .total-square {
-            background: var(--azul-fondo);
-            border: 2px solid var(--azul-oscuro);
-            padding: 20px;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .total-square span { font-size: 28px; font-weight: bold; display: block; }
+        /* Modales */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 4000; justify-content: center; align-items: center; }
+        .modal-content { background: white; padding: 30px; width: 90%; max-width: 500px; max-height: 90vh; overflow-y: auto; border-radius: 5px; position: relative; }
         .close-btn { position: absolute; top: 15px; right: 20px; cursor: pointer; font-size: 24px; }
 
-        .btn-ig {
-            background: var(--azul-marca);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-            font-weight: bold;
-        }
+        /* Formulario Feedback */
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 12px; margin-bottom: 5px; font-weight: 600; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 8px; border: 1px solid #ccc; }
+        .btn-submit { background: var(--azul-marca); color: white; border: none; padding: 10px 20px; cursor: pointer; width: 100%; font-weight: bold; }
 
-        /* Estilo para el botón eliminar del carrito */
-        .btn-remove {
-            color: var(--rojo-eliminar);
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 11px;
-            font-weight: bold;
-            margin-left: 10px;
-            text-decoration: underline;
-        }
+        /* Checkout Button */
+        .btn-checkout { background: var(--whatsapp-color); color: white; border: none; padding: 15px; width: 100%; cursor: pointer; font-weight: bold; margin-top: 15px; }
 
-        footer { padding: 40px; text-align: center; border-top: 1px solid #eee; }
-
-        /* =======================================================
-           CAMBIO 1: MEDIA QUERIES PARA ADAPTAR A CELULAR/TABLET
-           Se activa en pantallas de menos de 768px de ancho
-           ======================================================= */
-        @media only screen and (max-width: 768px) {
-            section { padding: 60px 5%; } /* Menos padding lateral en móvil */
-            
-            /* Encabezado apilado */
-            header {
-                flex-direction: column;
-                padding: 15px 3%;
-                text-align: center;
-            }
-
-            .logo-container { margin-bottom: 10px; }
-            .logo-text { font-size: 18px; letter-spacing: 2px; }
-            .logo-img { height: 30px; }
-
-            nav ul {
-                width: 100%;
-                justify-content: center;
-                flex-wrap: wrap; /* Permite que el menú se envuelva en varias líneas si es necesario */
-            }
-            
-            nav ul li { margin: 5px 8px; }
-            nav ul li a { font-size: 10px; }
-
-            /* Hero responsive */
-            .hero { padding: 70px 5%; }
-            .hero h1 { font-size: 32px; }
-            
-            /* Historia pasas a 1 columna */
-            .historia-box {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            /* Tienda responsive */
-            .shop-grid {
-                grid-template-columns: 1fr; /* Una columna por producto en móvil */
-                gap: 20px;
-            }
-            
-            .product-card { padding: 15px; }
-            .product-card img { height: 200px; }
-
-            /* Modal responsive */
-            .modal-content { padding: 30px 20px; }
-            .modal-content h3 { font-size: 1.2rem; }
-            .total-square span { font-size: 24px; }
-            
-            .btn-ig { width: 100%; text-align: center; padding: 12px; }
+        @media (max-width: 768px) {
+            header { flex-direction: column; }
+            nav ul { margin-top: 15px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/584125586826" target="_blank" class="btn-whatsapp-float">W</a>
+
     <header>
-        <a href="#inicio" class="logo-container">
-            <!-- Recuerda: La imagen debe estar en la misma carpeta que este archivo -->
-            <img src="logo.png" alt="Logo Sloane" class="logo-img">
+        <div class="logo-container">
+            <img src="image_70549d.png" alt="Logo" class="logo-img">
             <div class="logo-text">SLOANE</div>
-        </a>
+        </div>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#historia">Nuestra Historia</a></li>
-                <li><a href="#comprar">Productos</a></li>
-                <li><a href="javascript:void(0)" onclick="openModal()">Carrito (<span id="count">0</span>)</a></li>
+                <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+                <li><a href="#comprar" data-es="Productos" data-en="Products">Productos</a></li>
+                <li><a href="javascript:void(0)" onclick="openCart()" data-es="Carrito" data-en="Cart">Carrito (<span id="count">0</span>)</a></li>
+                <li><button class="lang-btn" onclick="toggleLanguage()">English</button></li>
             </ul>
         </nav>
     </header>
 
     <section id="inicio" class="hero">
-        <h1>SLOANE ESSENTIA</h1>
-        <p>"La química que se siente, la pureza que permanece"</p>
-    </section>
-
-    <section id="historia">
-        <div class="historia-box">
-            <div>
-                <h2>El porqué de nuestra raíz</h2>
-                <p>Elegimos el jabón porque creemos en la belleza de lo básico. En un mundo saturado, volver al jabón es volver a la esencia.</p>
-            </div>
-            <div>
-                <h2>Nuestro Proyecto</h2>
-                <p>Transformamos artículos de uso cotidiano en una experiencia de bienestar integral, respetando la barrera natural del cuerpo.</p>
-            </div>
-        </div>
+        <h1 id="hero-title" data-es="SLOANE ESSENTIA" data-en="SLOANE ESSENTIA">SLOANE ESSENTIA</h1>
+        <p id="hero-sub" data-es="La química que se siente" data-en="The chemistry you feel">La química que se siente</p>
     </section>
 
     <section id="comprar">
-        <h2 style="text-align:center; font-family:'Playfair Display'; margin-bottom:40px;">Colección Unisex</h2>
         <div class="shop-grid">
-            <!-- Pure Balance -->
             <div class="product-card">
-                <img src="jabon.png" alt="Pure Balance">
+                <img src="image_7049d6.png" alt="P1">
                 <h3>Pure Balance</h3>
-                <p>250ml / 125g</p>
                 <div class="price">40$</div>
-                <button class="btn-add" onclick="addItem('Pure Balance', 40)">AGREGAR AL CARRITO</button>
+                <button class="btn-add" onclick="addItem('Pure Balance', 40)">+ Add</button>
             </div>
-            <!-- Molecular Silk -->
-            <div class="product-card">
-                <img src="shampoo.png" alt="Molecular Silk">
-                <h3>Molecular Silk</h3>
-                <p>300ml</p>
-                <div class="price">30$</div>
-                <button class="btn-add" onclick="addItem('Molecular Silk', 30)">AGREGAR AL CARRITO</button>
-            </div>
-            <!-- Ethereal -->
-            <div class="product-card">
-                <img src="perfume.png" alt="Ethereal">
-                <h3>Ethereal</h3>
-                <p>100ml</p>
-                <div class="price">50$</div>
-                <button class="btn-add" onclick="addItem('Ethereal', 50)">AGREGAR AL CARRITO</button>
-            </div>
-            <!-- Shield 70 -->
-            <div class="product-card">
-                <img src="gel antibacterial.png" alt="Shield 70">
-                <h3>Shield 70%</h3>
-                <p>500ml</p>
-                <div class="price">25$</div>
-                <button class="btn-add" onclick="addItem('Shield 70%', 25)">AGREGAR AL CARRITO</button>
-            </div>
+            <!-- Otros productos seguirían aquí -->
         </div>
     </section>
 
-    <section id="contacto" style="text-align: center; background: #fafafa;">
-        <h2>Contacto</h2>
-        <p>¿Tienes dudas? Escríbenos directamente en Instagram.</p>
-        <a href="https://instagram.com/sloane_virtualshop" target="_blank" class="btn-ig">ESCRÍBENOS</a>
+    <section style="text-align: center;">
+        <button class="btn-submit" onclick="openFeedback()" data-es="Danos tu opinión" data-en="Give us feedback">Danos tu opinión</button>
     </section>
 
-    <!-- Modal Calculadora -->
+    <!-- Modal Carrito -->
     <div id="cartModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h3 style="font-family:'Playfair Display'; margin-bottom:20px;">Cálculo de Pedido</h3>
-            <div id="items-list" style="margin-bottom: 20px;">
-                <!-- Aquí se cargan los productos y el botón eliminar -->
-            </div>
-            
-            <div class="total-square">
-                <p>TOTAL A PAGAR</p>
-                <span id="total-val">0$</span>
-            </div>
+            <span class="close-btn" onclick="closeModal('cartModal')">&times;</span>
+            <h3 data-es="Tu Carrito" data-en="Your Cart">Tu Carrito</h3>
+            <div id="cart-list" style="margin: 20px 0;"></div>
+            <div style="font-weight: bold; border-top: 1px solid #eee; padding-top: 10px;">Total: <span id="total-val">0</span>$</div>
+            <button class="btn-checkout" onclick="sendToWhatsApp()" data-es="Comprar por WhatsApp" data-en="Buy via WhatsApp">Comprar por WhatsApp</button>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 SLOANE | @sloane_virtualshop</p>
-    </footer>
+    <!-- Modal Feedback -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('feedbackModal')">&times;</span>
+            <h3 data-es="Cuéntanos tu experiencia" data-en="Tell us your experience">Cuéntanos tu experiencia</h3>
+            <form id="feedbackForm" onsubmit="submitFeedback(event)">
+                <div class="form-group">
+                    <label data-es="Nombre" data-en="Name">Nombre</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label data-es="Correo" data-en="Email">Correo</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label data-es="País" data-en="Country">País</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label data-es="¿Qué le parece el producto?" data-en="Product quality?">¿Qué le parece el producto?</label>
+                    <select>
+                        <option value="excelente">Excelente</option>
+                        <option value="bueno">Bueno</option>
+                        <option value="regular">Regular</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-es="¿Nos recomendarías?" data-en="Would you recommend us?">¿Nos recomendarías?</label>
+                    <select>
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-es="Frecuencia de uso" data-en="Frequency of use">Frecuencia de uso</label>
+                    <select>
+                        <option value="diario">Diario</option>
+                        <option value="semanal">Semanal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-es="Sugerencias" data-en="Suggestions">Sugerencias</label>
+                    <textarea rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-submit" data-es="Enviar" data-en="Send">Enviar</button>
+            </form>
+        </div>
+    </div>
 
     <script>
         let cart = [];
-        let total = 0;
+        let currentLang = 'es';
+
+        function toggleLanguage() {
+            currentLang = (currentLang === 'es') ? 'en' : 'es';
+            document.querySelectorAll('[data-es]').forEach(el => {
+                el.innerText = el.getAttribute('data-' + currentLang);
+            });
+            document.querySelector('.lang-btn').innerText = (currentLang === 'es') ? 'English' : 'Español';
+        }
 
         function addItem(name, price) {
             cart.push({name, price});
-            total += price;
-            updateCartCounter();
-            openModal();
+            updateUI();
         }
 
-        // Actualiza el número de productos en el menú
-        function updateCartCounter() {
+        function updateUI() {
             document.getElementById('count').innerText = cart.length;
-        }
-
-        function openModal() {
-            const list = document.getElementById('items-list');
+            const list = document.getElementById('cart-list');
+            let total = 0;
             list.innerHTML = '';
-            
-            // Renderizar la lista con botón de eliminar
             cart.forEach((item, index) => {
-                list.innerHTML += `
-                    <div style="display:flex; justify-content:space-between; align-items: center; margin-bottom:10px; padding-bottom: 5px; border-bottom: 1px solid #eee;">
-                        <div>
-                            <span style="font-weight: 600;">${item.name}</span>
-                            <span style="color: var(--azul-marca); margin-left: 10px;">${item.price}$</span>
-                        </div>
-                        <!-- CAMBIO 2: Botón para eliminar producto -->
-                        <button class="btn-remove" onclick="removeItem(${index})">&times; (Eliminar)</button>
-                    </div>`;
+                total += item.price;
+                list.innerHTML += `<div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+                    <span>${item.name}</span>
+                    <span>${item.price}$ <button onclick="removeItem(${index})" style="color:red; background:none; border:none; cursor:pointer;">X</button></span>
+                </div>`;
             });
-            
-            document.getElementById('total-val').innerText = total + "$";
-            document.getElementById('cartModal').style.display = 'flex';
+            document.getElementById('total-val').innerText = total;
         }
 
-        /* =========================================================
-           CAMBIO 2: FUNCIÓN PARA ELIMINAR UN PRODUCTO DEL CARRITO
-           ========================================================= */
-        function removeItem(index) {
-            // 1. Obtener el producto que vamos a quitar
-            const itemToRemove = cart[index];
-            
-            // 2. Restar su precio del total
-            total -= itemToRemove.price;
-            
-            // 3. Eliminar el producto del arreglo 'cart' usando splice
-            cart.splice(index, 1);
-            
-            // 4. Actualizar el contador del menú
-            updateCartCounter();
-            
-            // 5. Volver a abrir el modal para refrescar la lista y el total
-            openModal();
-            
-            // Si el carrito se queda vacío, cerramos el modal opcionalmente
-            if (cart.length === 0) {
-                closeModal();
-            }
+        function removeItem(idx) {
+            cart.splice(idx, 1);
+            updateUI();
         }
 
-        function closeModal() {
-            document.getElementById('cartModal').style.display = 'none';
+        function sendToWhatsApp() {
+            let message = "Hola Sloane! Deseo comprar: %0A";
+            let total = 0;
+            cart.forEach(item => {
+                message += `- ${item.name} (${item.price}$)%0A`;
+                total += item.price;
+            });
+            message += "%0A Total: " + total + "$";
+            window.open(`https://wa.me/584125586826?text=${message}`);
         }
 
-        // Cerrar modal al hacer clic fuera del contenido
-        window.onclick = function(event) {
-            const modal = document.getElementById('cartModal');
-            if (event.target == modal) {
-                closeModal();
-            }
+        function openCart() { document.getElementById('cartModal').style.display = 'flex'; }
+        function openFeedback() { document.getElementById('feedbackModal').style.display = 'flex'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+        
+        function submitFeedback(e) {
+            e.preventDefault();
+            alert("¡Gracias por tu opinión!");
+            closeModal('feedbackModal');
         }
     </script>
 </body>
