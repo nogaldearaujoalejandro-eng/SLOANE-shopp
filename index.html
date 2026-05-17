@@ -27,78 +27,31 @@
 
         /* Navegación */
         header {
-            border-bottom: 1px solid #eee;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            background: white;
-            z-index: 1000;
+            border-bottom: 1px solid #eee; padding: 15px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; background: white; z-index: 1000;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--azul-oscuro);
-        }
-
-        .logo-img {
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: 3px;
-        }
+        .logo-container { display: flex; align-items: center; text-decoration: none; color: var(--azul-oscuro); }
+        .logo-img { height: 40px; margin-right: 10px; }
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; letter-spacing: 3px; }
 
         nav ul { display: flex; list-style: none; align-items: center; }
         nav ul li { margin: 0 15px; }
-        nav ul li a { 
-            text-decoration: none; 
-            color: var(--azul-oscuro); 
-            font-size: 12px; 
-            font-weight: 600;
-            text-transform: uppercase;
-        }
+        nav ul li a { text-decoration: none; color: var(--azul-oscuro); font-size: 12px; font-weight: 600; text-transform: uppercase; }
 
-        /* Botón de Idioma */
         .btn-lang {
-            background: var(--azul-oscuro);
-            color: var(--blanco);
-            border: none;
-            padding: 6px 12px;
-            font-size: 11px;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
+            background: var(--azul-oscuro); color: var(--blanco); border: none; padding: 6px 12px;
+            font-size: 11px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
         }
         .btn-lang:hover { background: var(--azul-marca); }
 
         /* WhatsApp Flotante */
         .wpp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: var(--whatsapp-color);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            z-index: 2500;
-            text-decoration: none;
-            transition: 0.3s;
+            position: fixed; bottom: 25px; right: 25px; background-color: var(--whatsapp-color);
+            color: white; width: 60px; height: 60px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 2500; text-decoration: none; transition: 0.3s;
         }
         .wpp-float:hover { transform: scale(1.08); }
         .wpp-float svg { width: 32px; height: 32px; fill: white; }
@@ -108,168 +61,45 @@
         .hero { background: var(--azul-fondo); text-align: center; padding: 100px 10%; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 45px; margin-bottom: 15px; }
 
-        /* Historia */
-        .historia-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
+        .historia-box { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
         .historia-box h2 { font-family: 'Playfair Display', serif; margin-bottom: 15px; color: var(--azul-marca); }
 
-        /* Tienda */
-        .shop-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 30px; 
-        }
-
-        .product-card {
-            border: 1px solid #f0f0f0;
-            padding: 20px;
-            text-align: center;
-            transition: 0.3s;
-            background: #fff;
-        }
-
+        .shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .product-card { border: 1px solid #f0f0f0; padding: 20px; text-align: center; transition: 0.3s; background: #fff; }
         .product-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-
-        .product-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-
+        .product-card img { width: 100%; height: 250px; object-fit: contain; margin-bottom: 15px; }
         .product-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin: 10px 0; }
         .price { font-weight: bold; color: var(--azul-marca); font-size: 1.3rem; margin-bottom: 15px; }
 
-        .btn-add {
-            background: var(--azul-oscuro);
-            color: white;
-            padding: 12px;
-            border: none;
-            cursor: pointer;
-            font-size: 11px;
-            font-weight: 700;
-            width: 100%;
-            transition: 0.3s;
-        }
-
+        .btn-add { background: var(--azul-oscuro); color: white; padding: 12px; border: none; cursor: pointer; font-size: 11px; font-weight: 700; width: 100%; transition: 0.3s; }
         .btn-add:hover { background: var(--azul-marca); }
 
         /* Modales */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4);
-            z-index: 3000;
-            justify-content: center; align-items: center;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 40px;
-            width: 450px;
-            max-width: 90%;
-            max-height: 85vh;
-            overflow-y: auto;
-            border: 1px solid var(--azul-oscuro);
-            position: relative;
-        }
-
-        .cart-row {
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .btn-remove {
-            background: none;
-            border: none;
-            color: var(--rojo-eliminar);
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 14px;
-            padding: 0 5px;
-        }
-
-        .total-square {
-            background: var(--azul-fondo);
-            border: 2px solid var(--azul-oscuro);
-            padding: 20px;
-            margin-top: 20px;
-            text-align: center;
-        }
-
+        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 3000; display: none; justify-content: center; align-items: center; }
+        .modal-content { background: white; padding: 40px; width: 450px; max-width: 90%; max-height: 85vh; overflow-y: auto; border: 1px solid var(--azul-oscuro); position: relative; }
+        .cart-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #eee; }
+        .btn-remove { background: none; border: none; color: var(--rojo-eliminar); cursor: pointer; font-weight: bold; font-size: 14px; padding: 0 5px; }
+        .total-square { background: var(--azul-fondo); border: 2px solid var(--azul-oscuro); padding: 20px; margin-top: 20px; text-align: center; }
         .total-square span { font-size: 28px; font-weight: bold; display: block; }
-
         .close-btn { position: absolute; top: 15px; right: 20px; cursor: pointer; font-size: 24px; }
 
-        .btn-ig, .btn-action {
-            background: var(--azul-marca);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-        }
+        .btn-ig, .btn-action { background: var(--azul-marca); color: white; padding: 15px 30px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: bold; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif; }
+        .btn-wpp-checkout { background: var(--whatsapp-color); color: white; width: 100%; padding: 14px; border: none; font-weight: bold; font-size: 13px; margin-top: 15px; cursor: pointer; }
 
-        .btn-wpp-checkout {
-            background: var(--whatsapp-color);
-            color: white;
-            width: 100%;
-            padding: 14px;
-            border: none;
-            font-weight: bold;
-            font-size: 13px;
-            margin-top: 15px;
-            cursor: pointer;
-            letter-spacing: 0.5px;
-        }
-
-        /* Estilos del Formulario de Feedback */
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        .form-group label {
-            display: block;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 13px;
-        }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        .form-group label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 5px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 8px; border: 1px solid #ccc; font-family: 'Montserrat', sans-serif; font-size: 13px; }
 
         footer { padding: 40px; text-align: center; border-top: 1px solid #eee; }
 
-        /* Adaptación Celulares y Tablets */
         @media only screen and (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 15px 2%;
-            }
+            header { flex-direction: column; padding: 15px 2%; }
             .logo-container { margin-bottom: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; }
             nav ul li { margin: 5px 10px; }
-            
             section { padding: 60px 5%; }
             .hero h1 { font-size: 32px; }
-            .historia-box { grid-template-columns: 1fr; gap: 30px; }
-            .shop-grid { grid-template-columns: 1fr; gap: 25px; }
+            .historia-box, .shop-grid { grid-template-columns: 1fr; gap: 25px; }
             .product-card img { height: 200px; }
         }
     </style>
@@ -277,14 +107,12 @@
 <body>
 
     <a href="https://wa.me/584125586826" target="_blank" class="wpp-float" id="wpp-icon">
-        <svg viewBox="0 0 32 32">
-            <path d="M16 2a13 13 0 0 0-11.3 19.4L3 29l7.8-2A13 13 0 1 0 16 2zm6.7 18.5c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.2-3.7-.8a12.6 12.6 0 0 1-5.3-4.7c-.6-.8-1-1.8-1-2.8 0-1.2.6-1.8.8-2.1.2-.2.5-.4.7-.4h.5c.2 0 .4 0 .6.4l1 2.3c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.4-.5.5-.2.2-.4.4-.2.8.3.4.9 1.5 1.8 2.3 1.1 1 2-1.3 2.3-1 .3.2.5.4 1 .6.4.2.9.4 1 .5.3.1.4.2.4.4 0 .3-.7 1.4-1 1.8z"/>
-        </svg>
+        <svg viewBox="0 0 32 32"><path d="M16 2a13 13 0 0 0-11.3 19.4L3 29l7.8-2A13 13 0 1 0 16 2zm6.7 18.5c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.2-3.7-.8a12.6 12.6 0 0 1-5.3-4.7c-.6-.8-1-1.8-1-2.8 0-1.2.6-1.8.8-2.1.2-.2.5-.4.7-.4h.5c.2 0 .4 0 .6.4l1 2.3c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.4-.5.5-.2.2-.4.4-.2.8.3.4.9 1.5 1.8 2.3 1.1 1 2-1.3 2.3-1 .3.2.5.4 1 .6.4.2.9.4 1 .5.3.1.4.2.4.4 0 .3-.7 1.4-1 1.8z"/></svg>
     </a>
 
     <header>
         <a href="#inicio" class="logo-container">
-            <img src="image_70549d.png" alt="Logo Sloane" class="logo-img">
+            <img src="logo.png" alt="Logo Sloane" class="logo-img">
             <div class="logo-text">SLOANE</div>
         </a>
         <nav>
@@ -299,7 +127,7 @@
     </header>
 
     <section id="inicio" class="hero">
-        <h1 data-es="SLOANE ESSENTIA" data-en="SLOANE ESSENTIA">SLOANE ESSENTIA</h1>
+        <h1>SLOANE ESSENTIA</h1>
         <p data-es='"La química que se siente, la pureza que permanece"' data-en='"The chemistry you feel, the purity that remains"'>"La química que se siente, la pureza que permanece"</p>
     </section>
 
@@ -320,28 +148,28 @@
         <h2 style="text-align:center; font-family:'Playfair Display'; margin-bottom:40px;" data-es="Colección Gold Series" data-en="Gold Series Collection">Colección Gold Series</h2>
         <div class="shop-grid">
             <div class="product-card">
-                <img src="image_7049d6.png" alt="Pure Balance">
+                <img src="Jabón.png" alt="Pure Balance">
                 <h3>Pure Balance</h3>
                 <p>250ml / 125g</p>
                 <div class="price">40$</div>
                 <button class="btn-add" onclick="addItem('Pure Balance', 40)" data-es="AGREGAR AL CARRITO" data-en="ADD TO CART">AGREGAR AL CARRITO</button>
             </div>
             <div class="product-card">
-                <img src="image_7049b3.png" alt="Molecular Silk">
+                <img src="shampoo.png" alt="Molecular Silk">
                 <h3>Molecular Silk</h3>
                 <p>300ml</p>
                 <div class="price">30$</div>
-                <button class="btn-add" onclick="addItem('Molecular Silk', 30)" data-es="AGREGAR AL CARRITO" data-en="ADD TO CART">AGREGAR AL CARRITO</button>
+                <button class="btn-add" onclick="addItem('Molecular Silk', 30)" data-es="AGREGAR AL CARRITO" data-en="ADD TO CART">AGREGAR AL CARTITO</button>
             </div>
             <div class="product-card">
-                <img src="image_70497a.png" alt="Ethereal">
+                <img src="perfume.png" alt="Ethereal">
                 <h3>Ethereal</h3>
                 <p>100ml</p>
                 <div class="price">50$</div>
                 <button class="btn-add" onclick="addItem('Ethereal', 50)" data-es="AGREGAR AL CARRITO" data-en="ADD TO CART">AGREGAR AL CARRITO</button>
             </div>
             <div class="product-card">
-                <img src="image_70495c.png" alt="Shield 70">
+                <img src="gel antibacteriano.png" alt="Shield 70">
                 <h3>Shield 70%</h3>
                 <p>500ml</p>
                 <div class="price">25$</div>
@@ -353,8 +181,7 @@
     <section id="contacto" style="text-align: center; background: #fafafa;">
         <h2 data-es="Contacto" data-en="Contact Us">Contacto</h2>
         <p data-es="¿Tienes dudas? Escríbenos directamente en Instagram o comparte tu experiencia." data-en="Do you have questions? Write to us directly on Instagram or share your experience.">¿Tienes dudas? Escríbenos directamente en Instagram o comparte tu experiencia.</p>
-        <a href="https://instagram.com/sloane_virtualshop" target="_blank" class="btn-ig" data-es="ESCRÍBENOS" data-en="WRITE TO US">ESCRÍBENOS</a>
-        <br>
+        <a href="https://instagram.com/sloane_virtualshop" target="_blank" class="btn-ig" data-es="ESCRÍBENOS" data-en="WRITE TO US">ESCRÍBENOS</a><br>
         <button class="btn-action" onclick="openModal('feedbackModal')" data-es="DANOS TU OPINIÓN" data-en="GIVE US FEEDBACK">DANOS TU OPINIÓN</button>
     </section>
 
@@ -363,7 +190,6 @@
             <span class="close-btn" onclick="closeModal('cartModal')">&times;</span>
             <h3 style="font-family:'Playfair Display'; margin-bottom:20px;" data-es="Cálculo de Pedido" data-en="Order Calculation">Cálculo de Pedido</h3>
             <div id="items-list" style="margin-bottom: 20px;"></div>
-            
             <div class="total-square">
                 <p data-es="TOTAL A PAGAR" data-en="TOTAL TO PAY">TOTAL A PAGAR</p>
                 <span id="total-val">0$</span>
@@ -376,22 +202,12 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('feedbackModal')">&times;</span>
             <h3 style="font-family:'Playfair Display'; margin-bottom:20px;" data-es="Tu Opinión Nos Importa" data-en="Your Feedback Matters">Tu Opinión Nos Importa</h3>
-            
             <form id="feedbackForm" onsubmit="sendFeedback(event)">
+                <div class="form-group"><label data-es="1. Nombre:" data-en="1. Name:">1. Nombre:</label><input type="text" id="fb-name" required></div>
+                <div class="form-group"><label data-es="2. Correo:" data-en="2. Email:">2. Correo:</label><input type="email" id="fb-email" required></div>
+                <div class="form-group"><label data-es="3. País:" data-en="3. Country:">3. País:</label><input type="text" id="fb-country" required></div>
                 <div class="form-group">
-                    <label data-es="1. Nombre del Usuario:" data-en="1. User Name:">1. Nombre del Usuario:</label>
-                    <input type="text" id="fb-name" required>
-                </div>
-                <div class="form-group">
-                    <label data-es="2. Correo Electrónico:" data-en="2. Email Address:">2. Correo Electrónico:</label>
-                    <input type="email" id="fb-email" required>
-                </div>
-                <div class="form-group">
-                    <label data-es="3. País:" data-en="3. Country:">3. País:</label>
-                    <input type="text" id="fb-country" required>
-                </div>
-                <div class="form-group">
-                    <label data-es="4. ¿Qué le parece nuestro producto?" data-en="4. What do you think of our product?">4. ¿Qué le parece nuestro producto?</label>
+                    <label data-es="4. ¿Qué le parece nuestro producto?" data-en="4. Product rating?">4. ¿Qué le parece nuestro producto?</label>
                     <select id="fb-rating">
                         <option value="Excelente" data-es="Excelente" data-en="Excellent">Excelente</option>
                         <option value="Bueno" data-es="Bueno" data-en="Good">Bueno</option>
@@ -399,7 +215,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label data-es="5. ¿Frecuencia con la que usa cosmética?" data-en="5. How often do you use cosmetics?">5. ¿Frecuencia con la que usa cosmética?</label>
+                    <label data-es="5. ¿Frecuencia de uso?" data-en="5. Frequency of use?">5. ¿Frecuencia de uso?</label>
                     <select id="fb-frequency">
                         <option value="Diario" data-es="Diario" data-en="Daily">Diario</option>
                         <option value="Semanal" data-es="Semanal" data-en="Weekly">Semanal</option>
@@ -407,110 +223,68 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label data-es="6. ¿Recomendaría nuestra marca?" data-en="6. Would you recommend our brand?">6. ¿Recomendaría nuestra marca?</label>
+                    <label data-es="6. ¿Nos recomendaría?" data-en="6. Would you recommend us?">6. ¿Nos recomendaría?</label>
                     <select id="fb-recommend">
                         <option value="Sí" data-es="Sí" data-en="Yes">Sí</option>
                         <option value="Tal vez" data-es="Tal vez" data-en="Maybe">Tal vez</option>
                         <option value="No" data-es="No" data-en="No">No</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label data-es="7. Recomendaciones y comentarios:" data-en="7. Recommendations and comments:">7. Recomendaciones y comentarios:</label>
-                    <textarea id="fb-comments" rows="3" required></textarea>
-                </div>
+                <div class="form-group"><label data-es="7. Comentarios:" data-en="7. Comments:">7. Comentarios:</label><textarea id="fb-comments" rows="3" required></textarea></div>
                 <button type="submit" class="btn-add" data-es="ENVIAR" data-en="SUBMIT">ENVIAR</button>
             </form>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 SLOANE | @sloane_virtualshop</p>
-    </footer>
+    <footer><p>&copy; 2026 SLOANE | @sloane_virtualshop</p></footer>
 
     <script>
-        let cart = [];
-        let total = 0;
-        let language = 'es';
+        let cart = [], total = 0, language = 'es';
 
-        // Lógica Multidioma
         function changeLanguage() {
             language = (language === 'es') ? 'en' : 'es';
-            document.querySelectorAll('[data-es]').forEach(element => {
-                element.innerText = element.getAttribute('data-' + language);
-            });
+            document.querySelectorAll('[data-es]').forEach(el => el.innerText = el.getAttribute('data-' + language));
             document.querySelector('.btn-lang').innerText = (language === 'es') ? 'English' : 'Español';
         }
 
-        // Lógica del Carrito
         function addItem(name, price) {
-            cart.push({name, price});
-            total += price;
+            cart.push({name, price}); total += price;
             document.getElementById('count').innerText = cart.length;
-            renderCart();
-            openModal('cartModal');
+            renderCart(); openModal('cartModal');
         }
 
         function renderCart() {
-            const list = document.getElementById('items-list');
-            list.innerHTML = '';
+            const list = document.getElementById('items-list'); list.innerHTML = '';
             cart.forEach((item, index) => {
-                list.innerHTML += `<div class="cart-row">
-                    <span>${item.name} - ${item.price}$</span>
-                    <button class="btn-remove" onclick="removeItem(${index})">&times;</button>
-                </div>`;
+                list.innerHTML += `<div class="cart-row"><span>${item.name} - ${item.price}$</span><button class="btn-remove" onclick="removeItem(${index})">&times;</button></div>`;
             });
             document.getElementById('total-val').innerText = total + "$";
         }
 
         function removeItem(index) {
-            total -= cart[index].price;
-            cart.splice(index, 1);
+            total -= cart[index].price; cart.splice(index, 1);
             document.getElementById('count').innerText = cart.length;
-            renderCart();
-            if (cart.length === 0) {
-                closeModal('cartModal');
-            }
+            renderCart(); if (cart.length === 0) closeModal('cartModal');
         }
 
-        // Checkout guiado a WhatsApp
         function checkoutToWhatsApp() {
             if (cart.length === 0) return;
-            
-            let baseText = "Hola SLOANE, quiero realizar un pedido desde la web:%0A%0A";
-            cart.forEach(item => {
-                baseText += `- ${item.name} (${item.price}$)%0A`;
-            });
-            baseText += `%0A*Total a Pagar: ${total}$*`;
-            
-            const whatsappUrl = `https://wa.me/584125586826?text=${baseText}`;
-            window.open(whatsappUrl, '_blank');
+            let text = "Hola SLOANE, quiero realizar un pedido desde la web:%0A%0A";
+            cart.forEach(item => text += `- ${item.name} (${item.price}$)%0A`);
+            text += `%0A*Total a Pagar: ${total}$*`;
+            window.open(`https://wa.me/584125586826?text=${text}`, '_blank');
         }
 
-        // Modales genéricos
-        function openModal(id) {
-            document.getElementById(id).style.display = 'flex';
+        function openModal(id) { document.getElementById(id).style.display = 'flex'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+
+        function sendFeedback(e) {
+            e.preventDefault();
+            alert((language === 'es') ? "¡Muchas gracias por tus comentarios!" : "Thank you very much for your comments!");
+            document.getElementById('feedbackForm').reset(); closeModal('feedbackModal');
         }
 
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-
-        // Enviar Formulario de Feedback
-        function sendFeedback(event) {
-            event.preventDefault();
-            const alertMsg = (language === 'es') ? "¡Muchas gracias por tus comentarios y recomendaciones!" : "Thank you very much for your comments and recommendations!";
-            alert(alertMsg);
-            document.getElementById('feedbackForm').reset();
-            closeModal('feedbackModal');
-        }
-
-        // Cerrar al hacer clic fuera del cuadro
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-            }
-        }
+        window.onclick = function(e) { if (e.target.classList.contains('modal')) e.target.style.display = 'none'; }
     </script>
 </body>
 </html>
-            
