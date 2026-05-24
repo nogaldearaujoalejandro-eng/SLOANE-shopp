@@ -18,27 +18,27 @@
         nav ul li a { text-decoration: none; color: var(--azul-oscuro); font-size: 12px; font-weight: 600; text-transform: uppercase; } 
         .btn-lang { background: var(--azul-oscuro); color: var(--blanco); border: none; padding: 6px 12px; font-size: 11px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; } 
         .btn-lang:hover { background: var(--azul-marca); } 
-        
-        /* WhatsApp Flotante con Imagen PNG */
+         
+        /* WhatsApp Flotante con Imagen PNG */ 
         .wpp-float { position: fixed; bottom: 25px; right: 25px; z-index: 2500; text-decoration: none; transition: 0.3s; width: 60px; height: 60px; } 
         .wpp-float:hover { transform: scale(1.08); } 
         .wpp-img { width: 100%; height: 100%; object-fit: contain; } 
-        
+         
         section { padding: 80px 10%; } 
         .hero { background: var(--azul-fondo); text-align: center; padding: 100px 10%; } 
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 45px; margin-bottom: 15px; } 
         .historia-box { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; } 
         .historia-box h2 { font-family: 'Playfair Display', serif; margin-bottom: 15px; color: var(--azul-marca); } 
-        
-        /* Cuadrícula e Igualación de Tarjetas */
+         
+        /* Cuadrícula e Igualación de Tarjetas */ 
         .shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; } 
         .product-card { border: 1px solid #f0f0f0; padding: 25px; text-align: center; transition: 0.3s; background: #fff; display: flex; flex-direction: column; justify-content: space-between; height: 100%; } 
         .product-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.05); } 
-        
-        /* Contenedor fijo de imagen para igualar todas las dimensiones visuales */
-        .img-container { width: 100%; height: 230px; display: flex; justify-content: center; align-items: center; background-color: #fafafa; margin-bottom: 15px; overflow: hidden; }
+         
+        /* Contenedor fijo de imagen para igualar todas las dimensiones visuales */ 
+        .img-container { width: 100%; height: 230px; display: flex; justify-content: center; align-items: center; background-color: #fafafa; margin-bottom: 15px; overflow: hidden; } 
         .img-container img { max-width: 100%; max-height: 100%; object-fit: contain; width: auto; height: auto; } 
-        
+         
         .product-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin: 10px 0 5px 0; } 
         .product-specs { font-size: 11px; font-weight: 600; color: #777; margin-bottom: 10px; } 
         .product-details { text-align: left; font-size: 11px; margin-bottom: 15px; line-height: 1.4; } 
@@ -46,7 +46,7 @@
         .price { font-weight: bold; color: var(--azul-marca); font-size: 1.3rem; margin-bottom: 15px; text-align: center; } 
         .btn-add { background: var(--azul-oscuro); color: white; padding: 12px; border: none; cursor: pointer; font-size: 11px; font-weight: 700; width: 100%; transition: 0.3s; } 
         .btn-add:hover { background: var(--azul-marca); } 
-        
+         
         .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 3000; display: none; justify-content: center; align-items: center; } 
         .modal-content { background: white; padding: 40px; width: 450px; max-width: 90%; max-height: 85vh; overflow-y: auto; border: 1px solid var(--azul-oscuro); position: relative; } 
         .cart-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #eee; } 
@@ -65,9 +65,9 @@
 </head> 
 <body> 
     <a href="https://wa.me/584125586826" target="_blank" class="wpp-float" id="wpp-icon"> 
-        <img src="whatsapp.png" alt="WhatsApp Sloane" class="wpp-img">
+        <img src="whatsapp.png" alt="WhatsApp Sloane" class="wpp-img"> 
     </a> 
-    
+     
     <header> 
         <a href="#inicio" class="logo-container"> 
             <img src="logo.png" alt="Logo Sloane" class="logo-img"> 
@@ -83,12 +83,12 @@
             </ul> 
         </nav> 
     </header> 
-    
+     
     <section id="inicio" class="hero"> 
         <h1>SLOANE ESSENTIA</h1> 
         <p data-es='"La química que se siente, la pureza que permanece"' data-en='"The chemistry you feel, the purity that remains"'>"La química que se siente, la pureza que permanece"</p> 
     </section> 
-    
+     
     <section id="historia"> 
         <div class="historia-box"> 
             <div> 
@@ -96,92 +96,93 @@
                 <p data-es="Elegimos el jabón porque creemos en la belleza de lo básico. En un mundo saturado, volver al jabón es volver a la esencia." data-en="We choose soap because we believe in the beauty of the basics. In a saturated world, returning to soap is returning to the essence.">Elegimos el jabón porque creemos en la belleza de lo básico. En un mundo saturado, volver al jabón es volver a la esencia.</p> 
             </div> 
             <div> 
-                <h2 data-es="Our Project" data-en="Our Project">Nuestro Proyecto</h2> 
+                <h2 data-es="Nuestro Proyecto" data-en="Our Project">Nuestro Proyecto</h2> 
                 <p data-es="Transformamos artículos de uso cotidiano en una experiencia de bienestar integral, respetando la barrera natural del cuerpo." data-en="We transform everyday items into a comprehensive wellness experience, respecting the body's natural barrier.">Transformamos artículos de uso cotidiano en una experiencia de bienestar integral, respetando la barrera natural del cuerpo.</p> 
             </div> 
         </div> 
     </section> 
-    
+     
     <section id="comprar"> 
         <h2 style="text-align:center; font-family:'Playfair Display'; margin-bottom:40px;" data-es="Colección Gold Series" data-en="Gold Series Collection">Colección Gold Series</h2> 
         <div class="shop-grid"> 
-            <div class="product-card"> 
-                <div>
-                    <div class="img-container"><img src="barra.jpeg" alt="Pure Balance"></div> 
-                    <h3>Pure Balance</h3>
-                    <p class="product-specs">Jabón en barra para manos (125g)</p> 
-                    <div class="product-details">
-                        <p><strong>Descripción:</strong> Redescubre la pureza en tu piel con un gel limpiador de avena, miel y aceite de coco.</p>
-                        <p><strong>Bondades:</strong> Fórmula ultrasuave, 100% libre de saponificación agresiva.</p>
-                        <p><strong>Beneficios:</strong> Limpia profundamente, calma la irritación y retiene la hidratación natural.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="price">40$</div> 
-                    <button class="btn-add" onclick="addItem('Pure Balance', 40)" data-es="AGREGAR AL CARRITO" data-en="ADD TO CART">AGREGAR AL CARRITO</button> 
-                </div>
-            </div> 
             
             <div class="product-card"> 
-                <div>
+                <div> 
+                    <div class="img-container"><img src="jabon.png" alt="Pure Balance"></div> 
+                    <h3>Pure Balance</h3> 
+                    <p class="product-specs" data-es="Jabón en barra para manos (125g)" data-en="Hand soap bar (125g)">Jabón en barra para manos (125g)</p> 
+                    <div class="product-details"> 
+                        <p><strong data-es="Descripción:" data-en="Description:">Descripción:</strong> <span data-es="Redescubre la pureza en tu piel con un gel limpiador de avena, miel y aceite de coco." data-en="Rediscover purity on your skin with an oatmeal, honey, and coconut oil cleansing gel.">Redescubre la pureza en tu piel con un gel limpiador de avena, miel y aceite de coco.</span></p> 
+                        <p><strong data-es="Bondades:" data-en="Benefits:">Bondades:</strong> <span data-es="Fórmula ultrasuave, 100% libre de saponificación agresiva." data-en="Ultra-gentle formula, 100% free of harsh saponification.">Fórmula ultrasuave, 100% libre de saponificación agresiva.</span></p> 
+                        <p><strong data-es="Beneficios:" data-en="Results:">Beneficios:</strong> <span data-es="Limpia profundamente, calma la irritación y retiene la hidratación natural." data-en="Deeply cleanses, soothes irritation, and retains natural hydration.">Limpia profundamente, calma la irritación y retiene la hidratación natural.</span></p> 
+                    </div> 
+                </div> 
+                <div> 
+                    <div class="price">40$</div> 
+                    <button class="btn-add" onclick="addItem('Pure Balance', 40)" data-es="AGREGAR AL CARRITO" data-en="ADD TO CART">AGREGAR AL CARRITO</button> 
+                </div> 
+            </div> 
+             
+            <div class="product-card"> 
+                <div> 
                     <div class="img-container"><img src="shampoo.jpeg" alt="Molecular Silk"></div> 
                     <h3>Molecular Silk</h3> 
-                    <p class="product-specs">Shampoo Suave (500ml)</p> 
-                    <div class="product-details">
-                        <p><strong>Descripción:</strong> Un respiro de seda para tu cabello con una fórmula molecular sin sulfatos ni parabenos.</p>
-                        <p><strong>Bondades:</strong> Cuidado capilar ligero, respetuoso con las fibras más delicadas.</p>
-                        <p><strong>Beneficios:</strong> Limpieza suave que aporta nutrición intensa, brillo natural y protección diaria.</p>
-                    </div>
-                </div>
-                <div>
+                    <p class="product-specs" data-es="Shampoo Suave (500ml)" data-en="Gentle Shampoo (500ml)">Shampoo Suave (500ml)</p> 
+                    <div class="product-details"> 
+                        <p><strong data-es="Descripción:" data-en="Description:">Descripción:</strong> <span data-es="Un respiro de seda para tu cabello con una fórmula molecular sin sulfatos ni parabenos." data-en="A breath of silk for your hair with a molecular formula free of sulfates and parabens.">Un respiro de seda para tu cabello con una fórmula molecular sin sulfatos ni parabenos.</span></p> 
+                        <p><strong data-es="Bondades:" data-en="Benefits:">Bondades:</strong> <span data-es="Cuidado capilar ligero, respetuoso con las fibras más delicadas." data-en="Lightweight hair care, respectful of the most delicate fibers.">Cuidado capilar ligero, respetuoso con las fibras más delicadas.</span></p> 
+                        <p><strong data-es="Beneficios:" data-en="Results:">Beneficios:</strong> <span data-es="Limpieza suave que aporta nutrición intensa, brillo natural y protección diaria." data-en="Gentle cleansing that provides intense nourishment, natural shine, and daily protection.">Limpieza suave que aporta nutrición intensa, brillo natural y protección diaria.</span></p> 
+                    </div> 
+                </div> 
+                <div> 
                     <div class="price">30$</div> 
                     <button class="btn-add" onclick="addItem('Molecular Silk', 30)" data-es="AGREGAR AL CARRITO" data-en="ADD TO CART">AGREGAR AL CARRITO</button> 
-                </div>
+                </div> 
             </div> 
 
             <div class="product-card"> 
-                <div>
-                    <div class="img-container"><img src="gel antibacterial.jpeg" alt="Hand Sanitizer Gel"></div> 
+                <div> 
+                    <div class="img-container"><img src="gel antibacterial.png" alt="Hand Sanitizer Gel"></div> 
                     <h3>Hand Sanitizer Gel</h3> 
-                    <p class="product-specs">Gel Antibacterial (300ml)</p> 
-                    <div class="product-details">
-                        <p><strong>Descripción:</strong> Protección instantánea y máxima suavidad para tus manos dondequiera que vayas, sin resecar.</p>
-                        <p><strong>Bondades:</strong> Enriquecido con vitamina E y 70% de alcohol de alta pureza.</p>
-                        <p><strong>Beneficios:</strong> Elimina el 99.9% de bacterias mientras hidrata y cuida tu piel.</p>
-                    </div>
-                </div>
-                <div>
+                    <p class="product-specs" data-es="Gel Antibacterial (300ml)" data-en="Hand Sanitizer Gel (300ml)">Gel Antibacterial (300ml)</p> 
+                    <div class="product-details"> 
+                        <p><strong data-es="Descripción:" data-en="Description:">Descripción:</strong> <span data-es="Protección instantánea y máxima suavidad para tus manos dondequiera que vayas, sin resecar." data-en="Instant protection and maximum softness for your hands wherever you go, without drying out.">Protección instantánea y máxima suavidad para tus manos dondequiera que vayas, sin resecar.</span></p> 
+                        <p><strong data-es="Bondades:" data-en="Benefits:">Bondades:</strong> <span data-es="Enriquecido con vitamina E y 70% de alcohol de alta pureza." data-en="Enriched with vitamin E and 70% high-purity alcohol.">Enriquecido con vitamina E y 70% de alcohol de alta pureza.</span></p> 
+                        <p><strong data-es="Beneficios:" data-en="Results:">Beneficios:</strong> <span data-es="Elimina el 99.9% de bacterias mientras hidrata y cuida tu piel." data-en="Eliminates 99.9% of bacteria while hydrating and caring for your skin.">Elimina el 99.9% de bacterias mientras hidrata y cuida tu piel.</span></p> 
+                    </div> 
+                </div> 
+                <div> 
                     <div class="price">25$</div> 
                     <button class="btn-add" onclick="addItem('Hand Sanitizer Gel', 25)" data-es="AGREGAR AL CARRITO" data-en="ADD TO CART">AGREGAR AL CARRITO</button> 
-                </div>
+                </div> 
             </div> 
-            
+             
             <div class="product-card"> 
-                <div>
-                    <div class="img-container"><img src="jabón liquido.jpeg" alt="Liquid Hand Soap"></div> 
+                <div> 
+                    <div class="img-container"><img src="perfume.png" alt="Liquid Hand Soap"></div> 
                     <h3>Liquid Hand Soap</h3> 
-                    <p class="product-specs">Liquid Hand Soap (300ml)</p> 
-                    <div class="product-details">
-                        <p><strong>Descripción:</strong> Envuélvete en una sinfonía aromática duradera y sofisticada que resalta tu elegancia natural.</p>
-                        <p><strong>Bondades:</strong> Fragancia floral fresca inspirada en extractos botánicos puros y relajantes.</p>
-                        <p><strong>Beneficios:</strong> Aporta frescura inmediata y fijación prolongada con un magnetismo sutil.</p>
-                    </div>
-                </div>
-                <div>
+                    <p class="product-specs" data-es="Liquid Hand Soap (300ml)" data-en="Liquid Hand Soap (300ml)">Liquid Hand Soap (300ml)</p> 
+                    <div class="product-details"> 
+                        <p><strong data-es="Descripción:" data-en="Description:">Descripción:</strong> <span data-es="Envuélvete en una sinfonía aromática duradera y sofisticada que resalta tu elegancia natural." data-en="Wrap yourself in a lasting and sophisticated aromatic symphony that highlights your natural elegance.">Envuélvete en una sinfonía aromática duradera y sofisticada que resalta tu elegancia natural.</span></p> 
+                        <p><strong data-es="Bondades:" data-en="Benefits:">Bondades:</strong> <span data-es="Fragancia floral fresca inspirada en extractos botánicos puros y relajantes." data-en="Fresh floral fragrance inspired by pure and relaxing botanical extracts.">Fragancia floral fresca inspirada en extractos botánicos puros y relajantes.</span></p> 
+                        <p><strong data-es="Beneficios:" data-en="Results:">Beneficios:</strong> <span data-es="Aporta frescura inmediata y fijación prolongada con un magnetismo sutil." data-en="Provides immediate freshness and prolonged retention with a subtle magnetism.">Aporta frescura inmediata y fijación prolongada con un magnetismo sutil.</span></p> 
+                    </div> 
+                </div> 
+                <div> 
                     <div class="price">50$</div> 
                     <button class="btn-add" onclick="addItem('Liquid Hand Soap', 50)" data-es="AGREGAR AL CARRITO" data-en="ADD TO CART">AGREGAR AL CARRITO</button> 
-                </div>
+                </div> 
             </div> 
         </div> 
     </section> 
-    
+     
     <section id="contacto" style="text-align: center; background: #fafafa;"> 
         <h2 data-es="Contacto" data-en="Contact Us">Contacto</h2> 
         <p data-es="¿Tienes dudas? Escríbenos directamente en Instagram o comparte tu experiencia." data-en="Do you have questions? Write to us directly on Instagram or share your experience.">¿Tienes dudas? Escríbenos directamente en Instagram o comparte tu experiencia.</p> 
         <a href="https://instagram.com/sloane_virtualshop" target="_blank" class="btn-ig" data-es="ESCRÍBENOS" data-en="WRITE TO US">ESCRÍBENOS</a><br> 
         <button class="btn-action" onclick="openModal('feedbackModal')" data-es="DANOS TU OPINIÓN" data-en="GIVE US FEEDBACK">DANOS TU OPINIÓN</button> 
     </section> 
-    
+     
     <div id="cartModal" class="modal"> 
         <div class="modal-content"> 
             <span class="close-btn" onclick="closeModal('cartModal')">&times;</span> 
@@ -194,7 +195,7 @@
             <button class="btn-wpp-checkout" onclick="checkoutToWhatsApp()" data-es="COMPRAR POR WHATSAPP" data-en="BUY VIA WHATSAPP">COMPRAR POR WHATSAPP</button> 
         </div> 
     </div> 
-    
+     
     <div id="feedbackModal" class="modal"> 
         <div class="modal-content"> 
             <span class="close-btn" onclick="closeModal('feedbackModal')">&times;</span> 
@@ -232,13 +233,14 @@
             </form> 
         </div> 
     </div> 
-    
+     
     <footer><p>&copy; 2026 SLOANE | @sloane_virtualshop</p></footer> 
-    
+     
     <script> 
         let cart = [], total = 0, language = 'es'; 
         function changeLanguage() { 
             language = (language === 'es') ? 'en' : 'es'; 
+            // Esto traduce automáticamente todas las etiquetas con data-es y data-en
             document.querySelectorAll('[data-es]').forEach(el => el.innerText = el.getAttribute('data-' + language)); 
             document.querySelector('.btn-lang').innerText = (language === 'es') ? 'English' : 'Español'; 
         } 
