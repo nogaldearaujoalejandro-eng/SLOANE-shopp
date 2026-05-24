@@ -26,26 +26,30 @@
          
         section { padding: 80px 10%; } 
         
-        /* Hero con Imagen de Fondo y Cuadro Translúcido */
+        /* Hero Section Styling with background image */
         .hero { 
-            background-image: url('{{ "fondo.jpeg" }}'); /* Ruta a tu imagen de fondo fondo.jpeg */
-            background-size: cover;
-            background-position: center;
+            background: var(--azul-fondo); 
             text-align: center; 
-            padding: 100px 10%; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 0; /* Let hero-content-wrapper handle padding */
+            background-image: url('fondo.jpeg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            height: 80vh; /* Set a height for the hero section */
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
         } 
-        .hero-content-box {
-            background-color: rgba(255, 255, 255, 0.75); /* Cuadro blanco medio transparente (75% opacidad) */
-            padding: 40px;
-            border-radius: 8px; /* Opcional: bordes redondeados */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional: sombra suave */
+        
+        /* White transparent overlay for the hero content */
+        .hero-content-wrapper { 
+            background-color: rgba(255, 255, 255, 0.7); /* White, 70% opacity */
+            padding: 40px 60px; 
+            border-radius: 8px; /* Optional: smooth corners */
         }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 45px; margin-bottom: 15px; color: var(--azul-oscuro); } 
-        .hero p { color: var(--azul-oscuro); }
 
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 45px; margin-bottom: 15px; } 
+        
         .historia-box { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; } 
         .historia-box h2 { font-family: 'Playfair Display', serif; margin-bottom: 15px; color: var(--azul-marca); } 
          
@@ -79,7 +83,7 @@
         .form-group label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 5px; } 
         .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 8px; border: 1px solid #ccc; font-family: 'Montserrat', sans-serif; font-size: 13px; } 
         footer { padding: 40px; text-align: center; border-top: 1px solid #eee; } 
-        @media only screen and (max-width: 768px) { header { flex-direction: column; padding: 15px 2%; } .logo-container { margin-bottom: 15px; } nav ul { flex-wrap: wrap; justify-content: center; } nav ul li { margin: 5px 10px; } section { padding: 60px 5%; } .hero h1 { font-size: 32px; } .hero-content-box { padding: 20px; } .historia-box, .shop-grid { grid-template-columns: 1fr; gap: 25px; } .img-container { height: 200px; } } 
+        @media only screen and (max-width: 768px) { header { flex-direction: column; padding: 15px 2%; } .logo-container { margin-bottom: 15px; } nav ul { flex-wrap: wrap; justify-content: center; } nav ul li { margin: 5px 10px; } section { padding: 60px 5%; } .hero h1 { font-size: 32px; } .hero { height: 60vh; } .hero-content-wrapper { padding: 20px 30px; } historia-box, .shop-grid { grid-template-columns: 1fr; gap: 25px; } .img-container { height: 200px; } } 
     </style> 
 </head> 
 <body> 
@@ -104,8 +108,8 @@
     </header> 
      
     <section id="inicio" class="hero"> 
-        <div class="hero-content-box">
-            <h1 data-es="SLOANE ESSENTIA" data-en="SLOANE ESSENTIA">SLOANE ESSENTIA</h1> 
+        <div class="hero-content-wrapper">
+            <h1>SLOANE ESSENTIA</h1> 
             <p data-es='"La química que se siente, la pureza que permanece"' data-en='"The chemistry you feel, the purity that remains"'>"La química que se siente, la pureza que permanece"</p> 
         </div>
     </section> 
